@@ -1,10 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, Fragment  } from 'react';
 //import Card from './UI/Card';
 import AddUser from './components/AddUser/AddUser';
 import UserList from './components/UserList/UserList';
-
-
 
 function App() {
 
@@ -21,11 +19,10 @@ function App() {
   }
 
   return (
-    <div>
+    <Fragment>
       <AddUser onSaveUser={saveHandler}></AddUser>
       {userArray.length > 0 && <UserList onDisplayList={userArray}></UserList>}
-      
-    </div>
+    </ Fragment>
   );
 }
 
